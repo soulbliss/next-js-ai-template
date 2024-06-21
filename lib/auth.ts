@@ -1,12 +1,20 @@
+import {
+  AUTH_SECRET,
+  GITHUB_ID,
+  GITHUB_SECRET,
+  GOOGLE_CLIENT_ID,
+  GOOGLE_CLIENT_SECRET,
+} from '@/config/env';
 import PostgresAdapter from '@auth/pg-adapter';
 import { NextAuthOptions } from 'next-auth';
 import { Adapter } from 'next-auth/adapters';
+import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import { db } from './db/db';
 
 export const authOptions: NextAuthOptions = {
   adapter: PostgresAdapter(db) as Adapter,
-  secret: process.env.AUTH_SECRET as string,
+  secret: AUTH_SECRET,
   pages: {
     error: '/login',
   },
@@ -17,9 +25,15 @@ export const authOptions: NextAuthOptions = {
     brandColor: '#FACC15',
   },
   providers: [
+    GitHubProvider({
+      allowDangerousEmailAccountLinking: true,
+      clientId: GITHUB_ID,
+      clientSecret: GITHUB_SECRET,
+    }),
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      allowDangerousEmailAccountLinking: true,
+      clientId: GOOGLE_CLIENT_ID,
+      clientSecret: GOOGLE_CLIENT_SECRET,
     }),
   ],
 };

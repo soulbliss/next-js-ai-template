@@ -44,7 +44,8 @@ export const migrations = `
     email VARCHAR(255),
     "emailVerified" TIMESTAMPTZ,
     image TEXT,
-
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
   );
 

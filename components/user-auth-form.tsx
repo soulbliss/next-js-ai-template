@@ -17,12 +17,23 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         variant="outline"
         onClick={() => {
           signIn('google', {
-            callbackUrl: PATHS.DASHBOARD,
+            callbackUrl: PATHS.HOME,
           });
         }}
         type="button">
         <Icons.google className="mr-2 h-4 w-4" />
         Google
+      </Button>
+      <Button
+        variant="outline"
+        onClick={() => {
+          signIn('github', {
+            callbackUrl: PATHS.HOME,
+          });
+        }}
+        type="button">
+        <Icons.gitHub className="mr-2 h-4 w-4" />
+        GitHub
       </Button>
     </div>
   );

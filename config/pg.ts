@@ -1,3 +1,14 @@
+import {
+  PG_DB_HOST,
+  PG_DB_IDLE_TIMEOUT,
+  PG_DB_MAX_CONNECTIONS,
+  PG_DB_NAME,
+  PG_DB_PASSWORD,
+  PG_DB_PORT,
+  PG_DB_SSL,
+  PG_DB_USER,
+} from '@/config/env';
+
 type dbClient = {
   user: string;
   password: string | undefined;
@@ -11,19 +22,13 @@ type dbClient = {
 };
 
 export const pgDbConfig: dbClient = {
-  user: process.env.PG_DB_USER as string,
-  password: process.env.PG_DB_PASSWORD as string,
-  database: process.env.PG_DB_NAME as string,
-  host: process.env.PG_DB_HOST || 'localhost',
-  port: process.env.PG_DB_PORT ? parseInt(process.env.PG_DB_PORT, 10) : 5432,
-  ssl: process.env.PG_DB_SSL === 'true',
-  max: process.env.PG_DB_MAX_CONNECTIONS
-    ? parseInt(process.env.PG_DB_MAX_CONNECTIONS, 10)
-    : 20,
-  idleTimeoutMillis: process.env.PG_DB_IDLE_TIMEOUT
-    ? parseInt(process.env.PG_DB_IDLE_TIMEOUT, 10)
-    : 10000,
-  connectionTimeoutMillis: process.env.PG_DB_CONNECTION_TIMEOUT
-    ? parseInt(process.env.PG_DB_CONNECTION_TIMEOUT, 10)
-    : 2000,
+  user: PG_DB_USER,
+  password: PG_DB_PASSWORD,
+  database: PG_DB_NAME,
+  host: PG_DB_HOST,
+  port: PG_DB_PORT,
+  ssl: PG_DB_SSL,
+  max: PG_DB_MAX_CONNECTIONS,
+  idleTimeoutMillis: PG_DB_IDLE_TIMEOUT,
+  connectionTimeoutMillis: 2000,
 };
