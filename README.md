@@ -8,7 +8,7 @@
 1. Next JS layout for AI tools
 1. Sample **Image generator AI tool scaffold**
 2. Skeleton page for Billing and Support
-4. Uses Shadcn UI, [change themes](https://ui.shadcn.com/themes)
+4. Uses Shadcn UI, [changeable themes](https://ui.shadcn.com/themes) 
 5. Has Google and Github login OAuth
 
 
@@ -73,7 +73,8 @@ Happy to add features which you require!
 ## Todo
 
 1. Add dark mode support
-2. Add remaining 3 AI tools layout
+2. Three AI tools layout
+   1. Add responsive support
 
 
 
