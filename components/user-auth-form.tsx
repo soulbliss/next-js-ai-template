@@ -14,7 +14,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   return (
     <div className={cn('grid gap-6', className)} {...props}>
       <Button
-        variant="outline"
+        variant="default"
         onClick={() => {
           signIn('google', {
             callbackUrl: PATHS.HOME,

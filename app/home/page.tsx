@@ -1,5 +1,6 @@
 import HeaderShell from '@/components/header-shell';
 import { Icons } from '@/components/icons';
+import { TypewriterEffectSmooth } from '@/components/typewriter-effect';
 import { Button } from '@/components/ui/button';
 import { authOptions } from '@/lib/auth';
 import { getCurrentUser } from '@/lib/session';
@@ -9,6 +10,25 @@ export const metadata = {
   title: 'Next JS AI tool layout',
   description: 'Next JS AI tool layout for your SaaS',
 };
+
+const words = [
+  {
+    text: 'Welcome',
+  },
+  {
+    text: 'to',
+  },
+  {
+    text: 'AI',
+  },
+  {
+    text: 'tool',
+  },
+  {
+    text: 'Layout',
+    className: 'text-primary',
+  },
+];
 
 export default async function Page() {
   const user = await getCurrentUser();
@@ -24,7 +44,7 @@ export default async function Page() {
         <div className="flex flex-col items-center gap-1 text-center">
           <Icons.checkSuccess className="h-10 w-10" />
           <h3 className="text-4xl font-bold tracking-tight">
-            Welcome to AI Tool Layout 1
+            <TypewriterEffectSmooth words={words} />
           </h3>
           <p className="my-4 text-2xl text-muted-foreground">
             High quality layout to make your Next JS AI app look more amazing!
