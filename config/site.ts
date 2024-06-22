@@ -1,20 +1,3 @@
-export type SiteConfig = typeof siteConfig;
-
 export const siteConfig = {
-  name: 'Template app',
-  url: 'http://localhost:3000',
-  ogImage: 'http://localhost:3000/og.jpg',
-  creator: 'Your name',
-  description: 'Description',
-  mainNav: [
-    {
-      title: 'Home',
-      href: '/',
-    },
-  ],
-  links: {
-    twitter: 'https://twitter.com/shadcn',
-    github: 'https://github.com/shadcn/ui',
-    docs: 'https://ui.shadcn.com',
-  },
+  name: 'AI Tool layout 1',
 };

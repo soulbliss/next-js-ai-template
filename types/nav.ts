@@ -1,11 +1,11 @@
-import { Icons } from '@/components/icons';
+import { LucideIcon } from 'lucide-react';
 
 export interface NavItem {
   title: string;
-  href?: string;
+  href: string;
   disabled?: boolean;
   external?: boolean;
-  icon?: keyof typeof Icons;
+  icon?: LucideIcon;
   label?: string;
 }
 

@@ -24,7 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         lang="en"
         className={`${fontSans.variable} ${fontDisplay.variable}`}>
         <head />
-        <body>
+        <body className="overflow-hidden">
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
             <Analytics />
