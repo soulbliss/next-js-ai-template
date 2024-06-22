@@ -1,4 +1,4 @@
-# Free Next JS 14 boilerplate for indiehackers!
+# Next JS AI tool Layout
 ![cover](https://raw.githubusercontent.com/soulbliss/next-js-14-starter-template/main/public/cover.png)
 
 

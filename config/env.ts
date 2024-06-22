@@ -3,6 +3,8 @@ import { z } from 'zod';
 const envSchema = z.object({
   AUTH_SECRET: z.string().min(1, 'AUTH_SECRET is required'),
 
+  DEV: z.preprocess((val) => val === 'true', z.boolean()),
+
   PG_DB_USER: z.string().min(1, 'PG_DB_USER is required'),
   PG_DB_PASSWORD: z.string().min(1, 'PG_DB_PASSWORD is required'),
   PG_DB_NAME: z.string().min(1, 'PG_DB_NAME is required'),
@@ -37,6 +39,7 @@ if (!env.success) {
 
 export const {
   AUTH_SECRET,
+  DEV,
   PG_DB_USER,
   PG_DB_PASSWORD,
   PG_DB_NAME,
