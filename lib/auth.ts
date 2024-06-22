@@ -11,6 +11,7 @@ import { Adapter } from 'next-auth/adapters';
 import GitHubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import { db } from './db/db';
+import { newUserCreated } from './notification';
 
 export const authOptions: NextAuthOptions = {
   adapter: PostgresAdapter(db) as Adapter,
@@ -36,4 +37,9 @@ export const authOptions: NextAuthOptions = {
       clientSecret: GOOGLE_CLIENT_SECRET,
     }),
   ],
+  events: {
+    createUser: async ({ user }) => {
+      await newUserCreated(user);
+    },
+  },
 };
