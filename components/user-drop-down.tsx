@@ -1,6 +1,6 @@
 'use client';
 
-import { getInitials } from '@/lib/utils';
+import { getInitials, truncate } from '@/lib/utils';
 import { Settings2Icon } from 'lucide-react';
 import { User } from 'next-auth';
 import { signOut } from 'next-auth/react';
@@ -59,10 +59,12 @@ export default function UserDropdown({ getCurrentUser }: UserDropdownProps) {
                   src={user.image || ''}
                   alt={user.name || user.email || ''}
                 />
-                <AvatarFallback>{getInitials(user.name)}</AvatarFallback>
+                <AvatarFallback>
+                  {getInitials(user.name || user.email)}
+                </AvatarFallback>
               </Avatar>
               <span className="px-2 text-sm font-medium leading-none text-muted-foreground">
-                {user.name}
+                {user.name || truncate(user.email!, 18)}
               </span>
             </div>
             <Settings2Icon className="mr-2 h-4 w-4 text-muted-foreground/60 hover:text-muted-foreground" />

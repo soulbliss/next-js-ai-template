@@ -24,3 +24,8 @@ export function getInitials(name: string | null | undefined): string {
 
   return `${firstInitial}${secondInitial || firstInitial}`;
 }
+
+export function truncate(text: string, length: number): string {
+  if (text.length <= length) return text;
+  return text.slice(0, length) + '...';
+}
