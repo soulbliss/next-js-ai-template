@@ -22,11 +22,11 @@ export default function LoginForm() {
           duration: 0.8,
           ease: 'easeInOut',
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4">
+        className="relative flex flex-col items-center justify-center gap-4 px-4">
         <Card className="mx-auto max-w-sm shadow-lg">
           <CardHeader>
-            <CardTitle className="text-2xl text-center">Login</CardTitle>
-            <CardDescription className="text-lg text-center text-balance">
+            <CardTitle className="text-center text-2xl">Login</CardTitle>
+            <CardDescription className="text-balance text-center text-lg">
               The Next JS AI layout for your next project.
             </CardDescription>
           </CardHeader>
