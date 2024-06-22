@@ -5,6 +5,14 @@ const envSchema = z.object({
 
   DEV: z.preprocess((val) => val === 'true', z.boolean()),
 
+  EMAIL_SERVER_HOST: z.string().min(1, 'EMAIL_SERVER_HOST is required'),
+  EMAIL_SERVER_PORT: z.preprocess(
+    (val) => Number(val),
+    z.number().int().positive(),
+  ),
+  EMAIL_SERVER_USER: z.string().min(1, 'EMAIL_SERVER_USER is required'),
+  EMAIL_SERVER_PASSWORD: z.string().min(1, 'EMAIL_SERVER_PASSWORD is required'),
+
   PG_DB_USER: z.string().min(1, 'PG_DB_USER is required'),
   PG_DB_PASSWORD: z.string().min(1, 'PG_DB_PASSWORD is required'),
   PG_DB_NAME: z.string().min(1, 'PG_DB_NAME is required'),
@@ -40,6 +48,10 @@ if (!env.success) {
 export const {
   AUTH_SECRET,
   DEV,
+  EMAIL_SERVER_HOST,
+  EMAIL_SERVER_PORT,
+  EMAIL_SERVER_USER,
+  EMAIL_SERVER_PASSWORD,
   PG_DB_USER,
   PG_DB_PASSWORD,
   PG_DB_NAME,

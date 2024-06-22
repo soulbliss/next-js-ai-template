@@ -1,3 +1,3 @@
 export const siteConfig = {
-  name: 'AI Tool layout',
+  name: 'Next JS AI Tool layout',
 };
