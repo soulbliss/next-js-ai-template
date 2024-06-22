@@ -8,7 +8,7 @@
 1. Next JS layout for AI tools
 1. Sample **Image generator AI tool scaffold**
 2. Skeleton page for Billing and Support
-4. Uses Shadcn UI
+4. Uses Shadcn UI, [change themes](https://ui.shadcn.com/themes)
 5. Has Google and Github login OAuth
 
 
