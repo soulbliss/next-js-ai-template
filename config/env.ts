@@ -34,7 +34,14 @@ const envSchema = z.object({
   GITHUB_ID: z.string().min(1, 'GITHUB_ID is required'),
   GITHUB_SECRET: z.string().min(1, 'GITHUB_SECRET is required'),
 
+  // optional for analytics
   NEXT_PUBLIC_MEASUREMENT_ID: z.string().optional(),
+
+  // optional for notifications
+  NOTIFICATION_WEBHOOK: z.string().optional(),
+
+  RESEND_API: z.string().optional(),
+  RESEND_AUDIENCE_ID: z.string().optional(),
 });
 
 // Parse and validate the environment variables
@@ -65,4 +72,7 @@ export const {
   GITHUB_ID,
   GITHUB_SECRET,
   NEXT_PUBLIC_MEASUREMENT_ID,
+  NOTIFICATION_WEBHOOK,
+  RESEND_API,
+  RESEND_AUDIENCE_ID,
 } = env.data;
