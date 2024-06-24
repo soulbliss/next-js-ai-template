@@ -1,6 +1,11 @@
 # Next JS AI tool Layout - 1
+![intro gif](https://next-js-ai-tool-layout-1.vercel.app/intro.gif)
 
 ![cover](https://next-js-ai-tool-layout-1.vercel.app/view.png)
+
+
+
+
 
 ## Features
 
@@ -57,9 +62,11 @@ Happy to add features which you require!
 
 ## Todo
 
-1. Add dark mode support
-2. Three AI tools layout
+1. Add annual plan for pricing - [Prasanna](https://x.com/worldofprasanna/status/1804690511225340311)
+2. Menu items, paragraphs need to bit more clean/readable, like an IBM Sans, Open Sans - [Mattia](https://x.com/heymattia/status/1804845580453036238)
+3. Three AI tools layout
    1. Add responsive support
+4. Add dark mode compatibility
 
 ## License
 
