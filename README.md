@@ -1,5 +1,5 @@
 # Next JS AI tool Layout - 1
-![intro gif](https://next-js-ai-tool-layout-1.vercel.app/intro.gif)
+![intro gif](https://raw.githubusercontent.com/soulbliss/next-js-ai-tool-layout-1/main/public/intro.gif)
 
 ![cover](https://next-js-ai-tool-layout-1.vercel.app/view.png)
 
