@@ -1,9 +1,21 @@
-# Next JS AI tool Layout - 1
-![intro gif](https://raw.githubusercontent.com/soulbliss/next-js-ai-tool-layout-1/main/public/intro.gif)
-
-![cover](https://next-js-ai-tool-layout-1.vercel.app/view.png)
+# Next JS AI template
 
 
+Main Dashboard
+
+![cover](./public/view.png)
+
+Billing page
+
+![Billing page](https://raw.githubusercontent.com/soulbliss/next-js-ai-tool-layout-1/main/public/Billing.png)
+
+Use different themes from Shadcn - UI
+
+![Themes](./public/themes.jpg)
+
+Login page
+
+![intro gif](./public/intro.gif)
 
 
 
