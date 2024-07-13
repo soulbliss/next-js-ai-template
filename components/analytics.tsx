@@ -22,6 +22,11 @@ export function Analytics() {
               });
           `}
       </Script>
+
+      <Script
+        defer
+        data-domain="nextjsaitemplates.com"
+        src={process.env.PLAUSIBLE}></Script>
     </>
   );
 }
