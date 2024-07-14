@@ -26,7 +26,7 @@ export function Analytics() {
       <Script
         defer
         data-domain="nextjsaitemplates.com"
-        src={process.env.PLAUSIBLE}></Script>
+        src={process.env.NEXT_PUBLIC_PLAUSIBLE}></Script>
     </>
   );
 }
