@@ -5,6 +5,8 @@ const envSchema = z.object({
 
   DEV: z.preprocess((val) => val === 'true', z.boolean()),
 
+  EMAIL_PROVIDER_TOKEN: z.string().min(1, 'EMAIL_PROVIDER_TOKEN is required'),
+
   EMAIL_SERVER_HOST: z.string().min(1, 'EMAIL_SERVER_HOST is required'),
   EMAIL_SERVER_PORT: z.preprocess(
     (val) => Number(val),
@@ -39,9 +41,6 @@ const envSchema = z.object({
 
   // optional for notifications
   NOTIFICATION_WEBHOOK: z.string().optional(),
-
-  RESEND_API: z.string().optional(),
-  RESEND_AUDIENCE_ID: z.string().optional(),
 });
 
 // Parse and validate the environment variables
@@ -55,6 +54,7 @@ if (!env.success) {
 export const {
   AUTH_SECRET,
   DEV,
+  EMAIL_PROVIDER_TOKEN,
   EMAIL_SERVER_HOST,
   EMAIL_SERVER_PORT,
   EMAIL_SERVER_USER,
@@ -73,6 +73,4 @@ export const {
   GITHUB_SECRET,
   NEXT_PUBLIC_MEASUREMENT_ID,
   NOTIFICATION_WEBHOOK,
-  RESEND_API,
-  RESEND_AUDIENCE_ID,
 } = env.data;
