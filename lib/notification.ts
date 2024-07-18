@@ -53,7 +53,7 @@ export async function afterUserCreated(values: User) {
     if (EMAIL_PROVIDER_TOKEN) {
       const contact: EmailContact = {
         email: values.email!,
-        firstName: '',
+        firstName: values.name || '',
         lastName: '',
         source: 'next-js-ai-tool-layout-1',
         subscribed: true,
